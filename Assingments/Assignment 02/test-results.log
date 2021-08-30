@@ -1,0 +1,266 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting test_student.py _______________________
+../../anaconda3/lib/python3.8/site-packages/_pytest/python.py:511: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+../../anaconda3/lib/python3.8/site-packages/py/_path/local.py:704: in pyimport
+    __import__(modname)
+<frozen importlib._bootstrap>:991: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:975: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:671: in _load_unlocked
+    ???
+../../anaconda3/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:152: in exec_module
+    exec(co, module.__dict__)
+test_student.py:1: in <module>
+    from a02 import calculateArea
+E     File "/home/saad/Downloads/assignment16/a02.py", line 34
+E       if TotalTiles - int(TotalTiles)==0:
+E       ^
+E   IndentationError: unexpected indent
+=========================== short test summary info ============================
+ERROR test_student.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.18s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting test_student.py _______________________
+../../anaconda3/lib/python3.8/site-packages/_pytest/python.py:511: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+../../anaconda3/lib/python3.8/site-packages/py/_path/local.py:704: in pyimport
+    __import__(modname)
+<frozen importlib._bootstrap>:991: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:975: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:671: in _load_unlocked
+    ???
+../../anaconda3/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:152: in exec_module
+    exec(co, module.__dict__)
+test_student.py:1: in <module>
+    from a02 import calculateArea
+E     File "/home/saad/Downloads/assignment16/a02.py", line 34
+E       if TotalTiles / int(TotalTiles)==1:
+E       ^
+E   IndentationError: unexpected indent
+=========================== short test summary info ============================
+ERROR test_student.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.14s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ............F.F....F                                     [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_calculateTiles_1 _____________________________
+
+    def test_calculateTiles_1():
+>       assert calculateTiles(4, 3, 1, 2) == 6
+E       AssertionError: assert 'Not Possible' == 6
+E        +  where 'Not Possible' = calculateTiles(4, 3, 1, 2)
+
+test_student.py:43: AssertionError
+____________________________ test_calculateTiles_3 _____________________________
+
+    def test_calculateTiles_3():
+>       assert calculateTiles(4, 3, 12, 1) == 1
+E       AssertionError: assert 'Not Possible' == 1
+E        +  where 'Not Possible' = calculateTiles(4, 3, 12, 1)
+
+test_student.py:50: AssertionError
+_____________________________ test_checkTilesFit_4 _____________________________
+
+    def test_checkTilesFit_4():
+>       assert checkTilesFit(5, 3, 3, 1) == True
+E       assert False == True
+E        +  where False = checkTilesFit(5, 3, 3, 1)
+
+test_student.py:66: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_calculateTiles_1 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_calculateTiles_3 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_checkTilesFit_4 - assert False == True
+========================= 3 failed, 17 passed in 0.07s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ............F.F....F                                     [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_calculateTiles_1 _____________________________
+
+    def test_calculateTiles_1():
+>       assert calculateTiles(4, 3, 1, 2) == 6
+E       AssertionError: assert 'Not Possible' == 6
+E        +  where 'Not Possible' = calculateTiles(4, 3, 1, 2)
+
+test_student.py:43: AssertionError
+____________________________ test_calculateTiles_3 _____________________________
+
+    def test_calculateTiles_3():
+>       assert calculateTiles(4, 3, 12, 1) == 1
+E       AssertionError: assert 'Not Possible' == 1
+E        +  where 'Not Possible' = calculateTiles(4, 3, 12, 1)
+
+test_student.py:50: AssertionError
+_____________________________ test_checkTilesFit_4 _____________________________
+
+    def test_checkTilesFit_4():
+>       assert checkTilesFit(5, 3, 3, 1) == True
+E       assert False == True
+E        +  where False = checkTilesFit(5, 3, 3, 1)
+
+test_student.py:66: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_calculateTiles_1 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_calculateTiles_3 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_checkTilesFit_4 - assert False == True
+========================= 3 failed, 17 passed in 0.07s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ............F.F....F                                     [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_calculateTiles_1 _____________________________
+
+    def test_calculateTiles_1():
+>       assert calculateTiles(4, 3, 1, 2) == 6
+E       AssertionError: assert 'Not Possible' == 6
+E        +  where 'Not Possible' = calculateTiles(4, 3, 1, 2)
+
+test_student.py:43: AssertionError
+____________________________ test_calculateTiles_3 _____________________________
+
+    def test_calculateTiles_3():
+>       assert calculateTiles(4, 3, 12, 1) == 1
+E       AssertionError: assert 'Not Possible' == 1
+E        +  where 'Not Possible' = calculateTiles(4, 3, 12, 1)
+
+test_student.py:50: AssertionError
+_____________________________ test_checkTilesFit_4 _____________________________
+
+    def test_checkTilesFit_4():
+>       assert checkTilesFit(5, 3, 3, 1) == True
+E       assert False == True
+E        +  where False = checkTilesFit(5, 3, 3, 1)
+
+test_student.py:66: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_calculateTiles_1 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_calculateTiles_3 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_checkTilesFit_4 - assert False == True
+========================= 3 failed, 17 passed in 0.07s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ............F.F....F                                     [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_calculateTiles_1 _____________________________
+
+    def test_calculateTiles_1():
+>       assert calculateTiles(4, 3, 1, 2) == 6
+E       AssertionError: assert 'Not Possible' == 6
+E        +  where 'Not Possible' = calculateTiles(4, 3, 1, 2)
+
+test_student.py:43: AssertionError
+____________________________ test_calculateTiles_3 _____________________________
+
+    def test_calculateTiles_3():
+>       assert calculateTiles(4, 3, 12, 1) == 1
+E       AssertionError: assert 'Not Possible' == 1
+E        +  where 'Not Possible' = calculateTiles(4, 3, 12, 1)
+
+test_student.py:50: AssertionError
+_____________________________ test_checkTilesFit_4 _____________________________
+
+    def test_checkTilesFit_4():
+>       assert checkTilesFit(5, 3, 3, 1) == True
+E       assert False == True
+E        +  where False = checkTilesFit(5, 3, 3, 1)
+
+test_student.py:66: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_calculateTiles_1 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_calculateTiles_3 - AssertionError: assert 'Not P...
+FAILED test_student.py::test_checkTilesFit_4 - assert False == True
+========================= 3 failed, 17 passed in 0.07s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ....................                                     [100%]
+
+============================== 20 passed in 0.03s ==============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ....................                                     [100%]
+
+============================== 20 passed in 0.04s ==============================
+========================================== test session starts ===========================================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment16
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 20 items
+
+test_student.py ....................                                                               [100%]
+
+=========================================== 20 passed in 0.04s ===========================================
