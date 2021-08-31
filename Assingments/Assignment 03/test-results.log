@@ -1,0 +1,792 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting test_student.py _______________________
+ImportError while importing test module '/home/saad/Downloads/assignment22/test_student.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+test_student.py:1: in <module>
+    from a03 import calculateProfit
+E   ImportError: cannot import name 'calculateProfit' from 'a03' (/home/saad/Downloads/assignment22/a03.py)
+=========================== short test summary info ============================
+ERROR test_student.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.13s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting test_student.py _______________________
+ImportError while importing test module '/home/saad/Downloads/assignment22/test_student.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+test_student.py:1: in <module>
+    from a03 import calculateProfit
+E   ImportError: cannot import name 'calculateProfit' from 'a03' (/home/saad/Downloads/assignment22/a03.py)
+=========================== short test summary info ============================
+ERROR test_student.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.07s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py FFFFFFFFFF                                               [100%]
+
+=================================== FAILURES ===================================
+______________________ test_calculateProfit_zero_check_1 _______________________
+
+    def test_calculateProfit_zero_check_1():
+>       assert calculateProfit(2, 0) == "Not Possible"
+E       AssertionError: assert (2, 0.0) == 'Not Possible'
+E        +  where (2, 0.0) = calculateProfit(2, 0)
+
+test_student.py:7: AssertionError
+______________________ test_calculateProfit_zero_check_2 _______________________
+
+    def test_calculateProfit_zero_check_2():
+>       assert calculateProfit(0, 4) == "Not Possible"
+
+test_student.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ali_budget = 0, bashir_budget = 4
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:32: ZeroDivisionError
+_____________________ test_calculateProfit_zero_check_all ______________________
+
+    def test_calculateProfit_zero_check_all():
+>       assert calculateProfit(0, 0) == "Not Possible"
+
+test_student.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ali_budget = 0, bashir_budget = 0
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:32: ZeroDivisionError
+_______________________ test_calculateProfit_str_check_1 _______________________
+
+    def test_calculateProfit_str_check_1():
+>       assert calculateProfit("4", 1) == "Not Possible"
+
+test_student.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+a03.py:31: in calculateProfit
+    t= chocolatePrice(ali_budget,bashir_budget)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ali_budge = '4', bashir_budge = 1
+
+    def chocolatePrice(ali_budge, bashir_budge):
+        a= ali_budge
+        b= bashir_budge
+        while b==True:
+    
+>           a, b = b, a % b
+E           TypeError: not all arguments converted during string formatting
+
+a03.py:7: TypeError
+_______________________ test_calculateProfit_str_check_2 _______________________
+
+    def test_calculateProfit_str_check_2():
+>       assert calculateProfit(1, "2") == "Not Possible"
+
+test_student.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ali_budget = 1, bashir_budget = '2'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+        i=ali_budget//t
+>       o=bashir_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'int'
+
+a03.py:33: TypeError
+______________________ test_calculateProfit_str_check_all ______________________
+
+    def test_calculateProfit_str_check_all():
+>       assert calculateProfit("2", "3") == "Not Possible"
+
+test_student.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ali_budget = '2', bashir_budget = '3'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:32: TypeError
+____________________________ test_chocolatePrice_1 _____________________________
+
+    def test_chocolatePrice_1():
+>       assert chocolatePrice(55, 15) == 5
+E       assert 55 == 5
+E        +  where 55 = chocolatePrice(55, 15)
+
+test_student.py:31: AssertionError
+____________________________ test_chocolatePrice_2 _____________________________
+
+    def test_chocolatePrice_2():
+>       assert chocolatePrice(99, 18) == 9
+E       assert 99 == 9
+E        +  where 99 = chocolatePrice(99, 18)
+
+test_student.py:34: AssertionError
+____________________________ test_chocolatePrice_3 _____________________________
+
+    def test_chocolatePrice_3():
+>       assert chocolatePrice(30, 12) == 6
+E       assert 30 == 6
+E        +  where 30 = chocolatePrice(30, 12)
+
+test_student.py:38: AssertionError
+____________________________ test_chocolatePrice_4 _____________________________
+
+    def test_chocolatePrice_4():
+>       assert chocolatePrice(50, 10) == 10
+E       assert 50 == 10
+E        +  where 50 = chocolatePrice(50, 10)
+
+test_student.py:41: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_calculateProfit_zero_check_1 - AssertionError: a...
+FAILED test_student.py::test_calculateProfit_zero_check_2 - ZeroDivisionError...
+FAILED test_student.py::test_calculateProfit_zero_check_all - ZeroDivisionErr...
+FAILED test_student.py::test_calculateProfit_str_check_1 - TypeError: not all...
+FAILED test_student.py::test_calculateProfit_str_check_2 - TypeError: unsuppo...
+FAILED test_student.py::test_calculateProfit_str_check_all - TypeError: unsup...
+FAILED test_student.py::test_chocolatePrice_1 - assert 55 == 5
+FAILED test_student.py::test_chocolatePrice_2 - assert 99 == 9
+FAILED test_student.py::test_chocolatePrice_3 - assert 30 == 6
+FAILED test_student.py::test_chocolatePrice_4 - assert 50 == 10
+============================== 10 failed in 0.07s ==============================
+=========================================================================================== test session starts ===========================================================================================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py FFFFFFFFFF                                                                                                                                                                          [100%]
+
+================================================================================================ FAILURES =================================================================================================
+____________________________________________________________________________________ test_calculateProfit_zero_check_1 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_1():
+>       assert calculateProfit(2, 0) == "Not Possible"
+E       AssertionError: assert (2, 0.0) == 'Not Possible'
+E        +  where (2, 0.0) = calculateProfit(2, 0)
+
+test_student.py:7: AssertionError
+____________________________________________________________________________________ test_calculateProfit_zero_check_2 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_2():
+>       assert calculateProfit(0, 4) == "Not Possible"
+
+test_student.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 4
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:36: ZeroDivisionError
+___________________________________________________________________________________ test_calculateProfit_zero_check_all ___________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_all():
+>       assert calculateProfit(0, 0) == "Not Possible"
+
+test_student.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 0
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:36: ZeroDivisionError
+____________________________________________________________________________________ test_calculateProfit_str_check_1 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_1():
+>       assert calculateProfit("4", 1) == "Not Possible"
+
+test_student.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+a03.py:35: in calculateProfit
+    t= chocolatePrice(ali_budget,bashir_budget)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budge = '4', bashir_budge = 1
+
+    def chocolatePrice(ali_budge, bashir_budge):
+        if ali_budge==str and bashir_budge==str:
+            return "Not Possible"
+        else:
+    
+            a= ali_budge
+            b= bashir_budge
+            while b==True:
+    
+>               a, b = b, a % b
+E               TypeError: not all arguments converted during string formatting
+
+a03.py:11: TypeError
+____________________________________________________________________________________ test_calculateProfit_str_check_2 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_2():
+>       assert calculateProfit(1, "2") == "Not Possible"
+
+test_student.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 1, bashir_budget = '2'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+        i=ali_budget//t
+>       o=bashir_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'int'
+
+a03.py:37: TypeError
+___________________________________________________________________________________ test_calculateProfit_str_check_all ____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_all():
+>       assert calculateProfit("2", "3") == "Not Possible"
+
+test_student.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = '2', bashir_budget = '3'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:36: TypeError
+__________________________________________________________________________________________ test_chocolatePrice_1 __________________________________________________________________________________________
+
+    def test_chocolatePrice_1():
+>       assert chocolatePrice(55, 15) == 5
+E       assert 55 == 5
+E        +  where 55 = chocolatePrice(55, 15)
+
+test_student.py:31: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_2 __________________________________________________________________________________________
+
+    def test_chocolatePrice_2():
+>       assert chocolatePrice(99, 18) == 9
+E       assert 99 == 9
+E        +  where 99 = chocolatePrice(99, 18)
+
+test_student.py:34: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_3 __________________________________________________________________________________________
+
+    def test_chocolatePrice_3():
+>       assert chocolatePrice(30, 12) == 6
+E       assert 30 == 6
+E        +  where 30 = chocolatePrice(30, 12)
+
+test_student.py:38: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_4 __________________________________________________________________________________________
+
+    def test_chocolatePrice_4():
+>       assert chocolatePrice(50, 10) == 10
+E       assert 50 == 10
+E        +  where 50 = chocolatePrice(50, 10)
+
+test_student.py:41: AssertionError
+========================================================================================= short test summary info =========================================================================================
+FAILED test_student.py::test_calculateProfit_zero_check_1 - AssertionError: assert (2, 0.0) == 'Not Possible'
+FAILED test_student.py::test_calculateProfit_zero_check_2 - ZeroDivisionError: integer division or modulo by zero
+FAILED test_student.py::test_calculateProfit_zero_check_all - ZeroDivisionError: integer division or modulo by zero
+FAILED test_student.py::test_calculateProfit_str_check_1 - TypeError: not all arguments converted during string formatting
+FAILED test_student.py::test_calculateProfit_str_check_2 - TypeError: unsupported operand type(s) for //: 'str' and 'int'
+FAILED test_student.py::test_calculateProfit_str_check_all - TypeError: unsupported operand type(s) for //: 'str' and 'str'
+FAILED test_student.py::test_chocolatePrice_1 - assert 55 == 5
+FAILED test_student.py::test_chocolatePrice_2 - assert 99 == 9
+FAILED test_student.py::test_chocolatePrice_3 - assert 30 == 6
+FAILED test_student.py::test_chocolatePrice_4 - assert 50 == 10
+=========================================================================================== 10 failed in 0.07s ============================================================================================
+=========================================================================================== test session starts ===========================================================================================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py FFFFFFFFFF                                                                                                                                                                          [100%]
+
+================================================================================================ FAILURES =================================================================================================
+____________________________________________________________________________________ test_calculateProfit_zero_check_1 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_1():
+>       assert calculateProfit(2, 0) == "Not Possible"
+E       AssertionError: assert (2, 0.0) == 'Not Possible'
+E        +  where (2, 0.0) = calculateProfit(2, 0)
+
+test_student.py:7: AssertionError
+____________________________________________________________________________________ test_calculateProfit_zero_check_2 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_2():
+>       assert calculateProfit(0, 4) == "Not Possible"
+
+test_student.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 4
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:39: ZeroDivisionError
+___________________________________________________________________________________ test_calculateProfit_zero_check_all ___________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_all():
+>       assert calculateProfit(0, 0) == "Not Possible"
+
+test_student.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 0
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       ZeroDivisionError: integer division or modulo by zero
+
+a03.py:39: ZeroDivisionError
+____________________________________________________________________________________ test_calculateProfit_str_check_1 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_1():
+>       assert calculateProfit("4", 1) == "Not Possible"
+
+test_student.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = '4', bashir_budget = 1
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:39: TypeError
+____________________________________________________________________________________ test_calculateProfit_str_check_2 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_2():
+>       assert calculateProfit(1, "2") == "Not Possible"
+
+test_student.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 1, bashir_budget = '2'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'int' and 'str'
+
+a03.py:39: TypeError
+___________________________________________________________________________________ test_calculateProfit_str_check_all ____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_all():
+>       assert calculateProfit("2", "3") == "Not Possible"
+
+test_student.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = '2', bashir_budget = '3'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:39: TypeError
+__________________________________________________________________________________________ test_chocolatePrice_1 __________________________________________________________________________________________
+
+    def test_chocolatePrice_1():
+>       assert chocolatePrice(55, 15) == 5
+E       assert 55 == 5
+E        +  where 55 = chocolatePrice(55, 15)
+
+test_student.py:31: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_2 __________________________________________________________________________________________
+
+    def test_chocolatePrice_2():
+>       assert chocolatePrice(99, 18) == 9
+E       assert 99 == 9
+E        +  where 99 = chocolatePrice(99, 18)
+
+test_student.py:34: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_3 __________________________________________________________________________________________
+
+    def test_chocolatePrice_3():
+>       assert chocolatePrice(30, 12) == 6
+E       assert 30 == 6
+E        +  where 30 = chocolatePrice(30, 12)
+
+test_student.py:38: AssertionError
+__________________________________________________________________________________________ test_chocolatePrice_4 __________________________________________________________________________________________
+
+    def test_chocolatePrice_4():
+>       assert chocolatePrice(50, 10) == 10
+E       assert 50 == 10
+E        +  where 50 = chocolatePrice(50, 10)
+
+test_student.py:41: AssertionError
+========================================================================================= short test summary info =========================================================================================
+FAILED test_student.py::test_calculateProfit_zero_check_1 - AssertionError: assert (2, 0.0) == 'Not Possible'
+FAILED test_student.py::test_calculateProfit_zero_check_2 - ZeroDivisionError: integer division or modulo by zero
+FAILED test_student.py::test_calculateProfit_zero_check_all - ZeroDivisionError: integer division or modulo by zero
+FAILED test_student.py::test_calculateProfit_str_check_1 - TypeError: unsupported operand type(s) for //: 'str' and 'str'
+FAILED test_student.py::test_calculateProfit_str_check_2 - TypeError: unsupported operand type(s) for //: 'int' and 'str'
+FAILED test_student.py::test_calculateProfit_str_check_all - TypeError: unsupported operand type(s) for //: 'str' and 'str'
+FAILED test_student.py::test_chocolatePrice_1 - assert 55 == 5
+FAILED test_student.py::test_chocolatePrice_2 - assert 99 == 9
+FAILED test_student.py::test_chocolatePrice_3 - assert 30 == 6
+FAILED test_student.py::test_chocolatePrice_4 - assert 50 == 10
+=========================================================================================== 10 failed in 0.07s ============================================================================================
+=========================================================================================== test session starts ===========================================================================================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py FFFFFF....                                                                                                                                                                          [100%]
+
+================================================================================================ FAILURES =================================================================================================
+____________________________________________________________________________________ test_calculateProfit_zero_check_1 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_1():
+>       assert calculateProfit(2, 0) == "Not Possible"
+
+test_student.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+a03.py:41: in calculateProfit
+    t= chocolatePrice(ali_budget,bashir_budget)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 2, bashir_budget = 0
+
+    def chocolatePrice(ali_budget, bashir_budget):
+        if type(ali_budget) == str or type(bashir_budget) == str:
+            return "Not Possible"
+        else:
+            smaller = 0
+            a= ali_budget
+            b= bashir_budget
+            if a > b:
+                smaller = b
+            else:
+                smaller = a
+        for i in range(1, smaller+1):
+            if((a % i == 0) and (b % i == 0)):
+                hcf = i
+>       return hcf
+E       UnboundLocalError: local variable 'hcf' referenced before assignment
+
+a03.py:16: UnboundLocalError
+____________________________________________________________________________________ test_calculateProfit_zero_check_2 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_2():
+>       assert calculateProfit(0, 4) == "Not Possible"
+
+test_student.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+a03.py:41: in calculateProfit
+    t= chocolatePrice(ali_budget,bashir_budget)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 4
+
+    def chocolatePrice(ali_budget, bashir_budget):
+        if type(ali_budget) == str or type(bashir_budget) == str:
+            return "Not Possible"
+        else:
+            smaller = 0
+            a= ali_budget
+            b= bashir_budget
+            if a > b:
+                smaller = b
+            else:
+                smaller = a
+        for i in range(1, smaller+1):
+            if((a % i == 0) and (b % i == 0)):
+                hcf = i
+>       return hcf
+E       UnboundLocalError: local variable 'hcf' referenced before assignment
+
+a03.py:16: UnboundLocalError
+___________________________________________________________________________________ test_calculateProfit_zero_check_all ___________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_all():
+>       assert calculateProfit(0, 0) == "Not Possible"
+
+test_student.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+a03.py:41: in calculateProfit
+    t= chocolatePrice(ali_budget,bashir_budget)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 0, bashir_budget = 0
+
+    def chocolatePrice(ali_budget, bashir_budget):
+        if type(ali_budget) == str or type(bashir_budget) == str:
+            return "Not Possible"
+        else:
+            smaller = 0
+            a= ali_budget
+            b= bashir_budget
+            if a > b:
+                smaller = b
+            else:
+                smaller = a
+        for i in range(1, smaller+1):
+            if((a % i == 0) and (b % i == 0)):
+                hcf = i
+>       return hcf
+E       UnboundLocalError: local variable 'hcf' referenced before assignment
+
+a03.py:16: UnboundLocalError
+____________________________________________________________________________________ test_calculateProfit_str_check_1 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_1():
+>       assert calculateProfit("4", 1) == "Not Possible"
+
+test_student.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = '4', bashir_budget = 1
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:42: TypeError
+____________________________________________________________________________________ test_calculateProfit_str_check_2 _____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_2():
+>       assert calculateProfit(1, "2") == "Not Possible"
+
+test_student.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = 1, bashir_budget = '2'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'int' and 'str'
+
+a03.py:42: TypeError
+___________________________________________________________________________________ test_calculateProfit_str_check_all ____________________________________________________________________________________
+
+    def test_calculateProfit_str_check_all():
+>       assert calculateProfit("2", "3") == "Not Possible"
+
+test_student.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ali_budget = '2', bashir_budget = '3'
+
+    def calculateProfit(ali_budget, bashir_budget):
+        i=0
+        t=0
+        o=0
+        Ali_profit=0
+        Bashir_profit=0
+        t= chocolatePrice(ali_budget,bashir_budget)
+>       i=ali_budget//t
+E       TypeError: unsupported operand type(s) for //: 'str' and 'str'
+
+a03.py:42: TypeError
+========================================================================================= short test summary info =========================================================================================
+FAILED test_student.py::test_calculateProfit_zero_check_1 - UnboundLocalError: local variable 'hcf' referenced before assignment
+FAILED test_student.py::test_calculateProfit_zero_check_2 - UnboundLocalError: local variable 'hcf' referenced before assignment
+FAILED test_student.py::test_calculateProfit_zero_check_all - UnboundLocalError: local variable 'hcf' referenced before assignment
+FAILED test_student.py::test_calculateProfit_str_check_1 - TypeError: unsupported operand type(s) for //: 'str' and 'str'
+FAILED test_student.py::test_calculateProfit_str_check_2 - TypeError: unsupported operand type(s) for //: 'int' and 'str'
+FAILED test_student.py::test_calculateProfit_str_check_all - TypeError: unsupported operand type(s) for //: 'str' and 'str'
+======================================================================================= 6 failed, 4 passed in 0.07s =======================================================================================
+=========================================================================================== test session starts ===========================================================================================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py FFF.......                                                                                                                                                                          [100%]
+
+================================================================================================ FAILURES =================================================================================================
+____________________________________________________________________________________ test_calculateProfit_zero_check_1 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_1():
+>       assert calculateProfit(2, 0) == "Not Possible"
+E       AssertionError: assert 'Not Possibe' == 'Not Possible'
+E         - Not Possible
+E         ?           -
+E         + Not Possibe
+
+test_student.py:7: AssertionError
+____________________________________________________________________________________ test_calculateProfit_zero_check_2 ____________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_2():
+>       assert calculateProfit(0, 4) == "Not Possible"
+E       AssertionError: assert 'Not Possibe' == 'Not Possible'
+E         - Not Possible
+E         ?           -
+E         + Not Possibe
+
+test_student.py:10: AssertionError
+___________________________________________________________________________________ test_calculateProfit_zero_check_all ___________________________________________________________________________________
+
+    def test_calculateProfit_zero_check_all():
+>       assert calculateProfit(0, 0) == "Not Possible"
+E       AssertionError: assert 'Not Possibe' == 'Not Possible'
+E         - Not Possible
+E         ?           -
+E         + Not Possibe
+
+test_student.py:14: AssertionError
+========================================================================================= short test summary info =========================================================================================
+FAILED test_student.py::test_calculateProfit_zero_check_1 - AssertionError: assert 'Not Possibe' == 'Not Possible'
+FAILED test_student.py::test_calculateProfit_zero_check_2 - AssertionError: assert 'Not Possibe' == 'Not Possible'
+FAILED test_student.py::test_calculateProfit_zero_check_all - AssertionError: assert 'Not Possibe' == 'Not Possible'
+======================================================================================= 3 failed, 7 passed in 0.06s =======================================================================================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment22
+plugins: timeout-1.4.2
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 10 items
+
+test_student.py ..........                                               [100%]
+
+============================== 10 passed in 0.03s ==============================
