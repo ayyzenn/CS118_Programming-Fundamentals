@@ -1,0 +1,95 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment29
+plugins: timeout-1.4.2
+timeout: 5.0s
+timeout method: signal
+timeout func_only: False
+collected 13 items
+
+test_student.py ..F.F......F.                                            [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_openLocks_3 _______________________________
+
+    def test_openLocks_3():
+>       assert openLocks(100, 72) == 34
+E       assert 10 == 34
+E        +  where 10 = openLocks(100, 72)
+
+test_student.py:14: AssertionError
+_______________________________ test_openLocks_5 _______________________________
+
+    def test_openLocks_5():
+>       assert openLocks(10000, 1000) == 5228
+E       assert 100 == 5228
+E        +  where 100 = openLocks(10000, 1000)
+
+test_student.py:20: AssertionError
+__________________________ test_mostTouchableLocker_4 __________________________
+
+    def test_mostTouchableLocker_4():
+>       assert mostTouchableLocker(100, 70) == 60
+E       assert 96 == 60
+E        +  where 96 = mostTouchableLocker(100, 70)
+
+test_student.py:43: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_openLocks_3 - assert 10 == 34
+FAILED test_student.py::test_openLocks_5 - assert 100 == 5228
+FAILED test_student.py::test_mostTouchableLocker_4 - assert 96 == 60
+========================= 3 failed, 10 passed in 5.05s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /home/saad/Downloads/assignment29
+plugins: timeout-1.4.2
+timeout: 5.0s
+timeout method: signal
+timeout func_only: False
+collected 13 items
+
+test_student.py ..F.F......F.                                            [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_openLocks_3 _______________________________
+
+    def test_openLocks_3():
+>       assert openLocks(100, 72) == 34
+E       assert 10 == 34
+E        +  where 10 = openLocks(100, 72)
+
+test_student.py:14: AssertionError
+_______________________________ test_openLocks_5 _______________________________
+
+    def test_openLocks_5():
+>       assert openLocks(10000, 1000) == 5228
+
+test_student.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+a04.py:19: in openLocks
+    a = f(i)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = 9386
+
+    def f(x):
+        a = 2
+        counter = 1
+        while a<=x:
+>           if x%a==0:
+E           Failed: Timeout >5.0s
+
+a04.py:6: Failed
+__________________________ test_mostTouchableLocker_4 __________________________
+
+    def test_mostTouchableLocker_4():
+>       assert mostTouchableLocker(100, 70) == 60
+E       assert 96 == 60
+E        +  where 96 = mostTouchableLocker(100, 70)
+
+test_student.py:43: AssertionError
+=========================== short test summary info ============================
+FAILED test_student.py::test_openLocks_3 - assert 10 == 34
+FAILED test_student.py::test_openLocks_5 - Failed: Timeout >5.0s
+FAILED test_student.py::test_mostTouchableLocker_4 - assert 96 == 60
+========================= 3 failed, 10 passed in 5.08s =========================
